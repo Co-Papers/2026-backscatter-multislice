@@ -9,10 +9,13 @@
 ```
 scripts/          全部计算与绘图脚本（Python，GPU/CuPy）
 atomic_model/     SrTiO3.cif 原子模型
-figures/          论文全部 16 张图（300 dpi，与正文编号对应见下）
+figures/          论文关键图（图 1-6、15、16；300 dpi）
 data/             （预留；完整 npz 数据见 Release 资产）
 docs/             设计文档、文献调查、CBED/EBSD 原理笔记
 ```
+
+> 注：8 张电压网格大图（图 7-14，每张约 13 MB）与论文 Word 稿不在 git 历史中，
+> 均在 Release 资产 `paper_figures_full_2026-10-29.zip` / `backscatter_paper_zh_v6.docx` 中。
 
 ## 环境（复现前提）
 
@@ -36,7 +39,7 @@ docs/             设计文档、文献调查、CBED/EBSD 原理笔记
 | 图 3 | fig03_convergence.png | `plot_cbed_bse_convergence.py`（数据：`cbed_bse_convergence.py`） |
 | 图 4 | fig04_unitarity.png | `plot_cbed_bse_unitarity.py`（数据：`cbed_bse_fft_laplace_5keV.py`、`cbed_bse_unitarity_source.py`、`flux_budget_5keV.py`） |
 | 图 5-6 | fig05/fig06 | `test_laplacian_precision.py`、`benchmark_laplacian_ft.py` |
-| 图 7-14 | cbed_bse_{5..300}keV.png | `cbed_bse_energy_sweep.py` |
+| 图 7-14 | cbed_bse_{5..300}keV.png（Release 资产） | `cbed_bse_energy_sweep.py` |
 | 图 15 | fig15_timing.png | 同上（计时输出） |
 | 图 16 | fig16_ebsd_gnomonic.png | `ebsd_kikuchi_pointsource.py` 系列 |
 
